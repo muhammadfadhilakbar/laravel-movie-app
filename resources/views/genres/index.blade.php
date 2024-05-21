@@ -38,26 +38,26 @@
                                         <p class="font-medium">Actions</p>
                                     </div>
                                 </div>
-
+                                @foreach ($genres as $genre)
                                 <div class="grid grid-cols-6 border-t border-stroke px-4 py-4.5 dark:border-strokedark sm:grid-cols-8 md:px-6 2xl:px-7.5">
                                     <div class="col-span-3 flex items-center">
                                         <div class="flex flex-col gap-4 sm:flex-row sm:items-center">
                                             <div class="w-12 rounded-md">
-                                                <img src="src/images/movie/movie-01.jpg" alt="Product" />
+                                            <img src="src/images/movie/{{ $genre['poster'] }}" alt="Product" />
                                             </div>
                                             <p class="text-sm font-medium text-black dark:text-white">
-                                                1
+                                            {{ $genre['id'] }}
                                             </p>
                                         </div>
                                     </div>
                                     <div class="col-span-1 items-center sm:flex">
                                         <p class="text-sm font-medium text-black dark:text-white">
-                                        Jojo Bizarre Adventure
+                                        {{ $genre['nama'] }}
                                         </p>
                                     </div>
                                     <div class="col-span-3 flex items-center">
                                         <p class="text-sm font-medium text-black dark:text-white">
-                                        adalah sebuah serial anime dan manga yang diciptakan oleh Hirohiko Araki. Serial ini pertama kali diterbitkan pada tahun 1987 dan telah berkembang menjadi salah satu seri paling populer dan ikonik dalam sejarah manga dan anime. 
+                                        {{ $genre['deskripsi'] }}
                                         </p>
                                     </div>
                                     <div class="col-span-1 flex items-center">
@@ -67,118 +67,7 @@
                                         </div>
                                     </div>
                                 </div>
-                                <div class="grid grid-cols-6 border-t border-stroke px-4 py-4.5 dark:border-strokedark sm:grid-cols-8 md:px-6 2xl:px-7.5">
-                                    <div class="col-span-3 flex items-center">
-                                        <div class="flex flex-col gap-4 sm:flex-row sm:items-center">
-                                            <div class="w-12 rounded-md">
-                                                <img src="src/images/movie/movie-02.jpg" alt="Product" />
-                                            </div>
-                                            <p class="text-sm font-medium text-black dark:text-white">
-                                                2
-                                            </p>
-                                        </div>
-                                    </div>
-                                    <div class="col-span-1 items-center sm:flex">
-                                        <p class="text-sm font-medium text-black dark:text-white">
-                                            Noragami
-                                        </p>
-                                    </div>
-                                    <div class="col-span-3 flex items-center">
-                                        <p class="text-sm font-medium text-black dark:text-white">
-                                        adalah sebuah serial anime dan manga yang ditulis oleh Adachitoka. Serial ini pertama kali diterbitkan sebagai manga pada tahun 2010 dan diadaptasi menjadi anime pada tahun 2014. 
-                                        </p>
-                                    </div>
-                                    <div class="col-span-1 flex items-center">
-                                        <div class="flex items-center space-x-1">
-                                            <a href="" class="inline-flex items-center rounded-md bg-yellow-50 px-2 py-1 text-xs font-medium text-yellow-800 ring-1 ring-inset ring-yellow-600/20">Edit</a>
-                                            <a href="" class="inline-flex items-center rounded-md bg-red-50 px-2 py-1 text-xs font-medium text-red-800 ring-1 ring-inset ring-red-600/20">Delete</a>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="grid grid-cols-6 border-t border-stroke px-4 py-4.5 dark:border-strokedark sm:grid-cols-8 md:px-6 2xl:px-7.5">
-                                    <div class="col-span-3 flex items-center">
-                                        <div class="flex flex-col gap-4 sm:flex-row sm:items-center">
-                                            <div class="w-12 rounded-md">
-                                                <img src="src/images/movie/movie-03.jpg" alt="Product" />
-                                            </div>
-                                            <p class="text-sm font-medium text-black dark:text-white">
-                                                3
-                                            </p>
-                                        </div>
-                                    </div>
-                                    <div class="col-span-1 items-center sm:flex">
-                                        <p class="text-sm font-medium text-black dark:text-white">
-                                        Wind Breaker
-                                        </p>
-                                    </div>
-                                    <div class="col-span-3 flex items-center">
-                                        <p class="text-sm font-medium text-black dark:text-white">
-                                        adalah sebuah webtoon asal Korea Selatan yang ditulis dan diilustrasikan oleh Jo Yongseok.
-                                        </p>
-                                    </div>
-                                    <div class="col-span-1 flex items-center">
-                                        <div class="flex items-center space-x-1">
-                                            <a href="" class="inline-flex items-center rounded-md bg-yellow-50 px-2 py-1 text-xs font-medium text-yellow-800 ring-1 ring-inset ring-yellow-600/20">Edit</a>
-                                            <a href="" class="inline-flex items-center rounded-md bg-red-50 px-2 py-1 text-xs font-medium text-red-800 ring-1 ring-inset ring-red-600/20">Delete</a>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="grid grid-cols-6 border-t border-stroke px-4 py-4.5 dark:border-strokedark sm:grid-cols-8 md:px-6 2xl:px-7.5">
-                                    <div class="col-span-3 flex items-center">
-                                        <div class="flex flex-col gap-4 sm:flex-row sm:items-center">
-                                            <div class="w-12 rounded-md">
-                                                <img src="src/images/movie/movie-05.jpeg" alt="Product" />
-                                            </div>
-                                            <p class="text-sm font-medium text-black dark:text-white">
-                                                4
-                                            </p>
-                                        </div>
-                                    </div>
-                                    <div class="col-span-1 items-center sm:flex">
-                                        <p class="text-sm font-medium text-black dark:text-white">
-                                        One piece
-                                        </p>
-                                    </div>
-                                    <div class="col-span-3 flex items-center">
-                                        <p class="text-sm font-medium text-black dark:text-white">
-                                        adalah sebuah serial anime dan manga yang diciptakan oleh Eiichiro Oda. Manga ini pertama kali diterbitkan pada tahun 1997 dan sejak itu telah menjadi salah satu seri paling populer dan terpanjang dalam sejarah. 
-                                        </p>
-                                    </div>
-                                    <div class="col-span-1 flex items-center">
-                                        <div class="flex items-center space-x-1">
-                                            <a href="" class="inline-flex items-center rounded-md bg-yellow-50 px-2 py-1 text-xs font-medium text-yellow-800 ring-1 ring-inset ring-yellow-600/20">Edit</a>
-                                            <a href="" class="inline-flex items-center rounded-md bg-red-50 px-2 py-1 text-xs font-medium text-red-800 ring-1 ring-inset ring-red-600/20">Delete</a>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="grid grid-cols-6 border-t border-stroke px-4 py-4.5 dark:border-strokedark sm:grid-cols-8 md:px-6 2xl:px-7.5">
-                                    <div class="col-span-3 flex items-center">
-                                        <div class="flex flex-col gap-4 sm:flex-row sm:items-center">
-                                            <div class="w-12 rounded-md">
-                                                <img src="src/images/movie/movie-04.jpg" alt="Product" />
-                                            </div>
-                                            <p class="text-sm font-medium text-black dark:text-white">
-                                                5
-                                            </p>
-                                        </div>
-                                    </div>
-                                    <div class="col-span-1 items-center sm:flex">
-                                        <p class="text-sm font-medium text-black dark:text-white">
-                                        Spy x family
-                                        </p>
-                                    </div>
-                                    <div class="col-span-3 flex items-center">
-                                        <p class="text-sm font-medium text-black dark:text-white">
-                                        adalah sebuah serial manga yang ditulis dan diilustrasikan oleh Tatsuya Endo. Manga ini mulai diterbitkan pada tahun 2019 dan telah diadaptasi menjadi anime. 
-                                        </p>
-                                    </div>
-                                    <div class="col-span-1 flex items-center">
-                                        <div class="flex items-center space-x-1">
-                                            <a href="" class="inline-flex items-center rounded-md bg-yellow-50 px-2 py-1 text-xs font-medium text-yellow-800 ring-1 ring-inset ring-yellow-600/20">Edit</a>
-                                            <a href="" class="inline-flex items-center rounded-md bg-red-50 px-2 py-1 text-xs font-medium text-red-800 ring-1 ring-inset ring-red-600/20">Delete</a>
-                                        </div>
-                                    </div>
-                                </div>
+                                @endforeach
                             </div>
 
                             <!-- ====== Table Two End -->
