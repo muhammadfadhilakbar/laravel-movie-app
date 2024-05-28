@@ -46,18 +46,18 @@
                                             <img src="src/images/movie/{{ $genre['poster'] }}" alt="Product" />
                                             </div>
                                             <p class="text-sm font-medium text-black dark:text-white">
-                                            {{ $genre['id'] }}
+                                            {{ $genre->id }}
                                             </p>
                                         </div>
                                     </div>
                                     <div class="col-span-1 items-center sm:flex">
                                         <p class="text-sm font-medium text-black dark:text-white">
-                                        {{ $genre['nama'] }}
+                                        {{ $genre->name }}
                                         </p>
                                     </div>
                                     <div class="col-span-3 flex items-center">
                                         <p class="text-sm font-medium text-black dark:text-white">
-                                        {{ $genre['deskripsi'] }}
+                                        {{ $genre->description }}
                                         </p>
                                     </div>
                                     <div class="col-span-1 flex items-center">
