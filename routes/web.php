@@ -2,7 +2,7 @@
 
 use App\Http\Controllers\MovieController;
 use App\Http\Controllers\GenreController;
-use App\Http\Controllers\reviewController;
+use App\Http\Controllers\ReviewController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -23,8 +23,17 @@ Route::get('/products', function () {
     return view('product');
 });
 
-route::get('/movies', [MovieController::class, 'index']);
+Route::get('/movies', [MovieController::class, 'index']);
+Route::get('/movies/create', [MovieController::class, 'create']);
+Route::post('/movies', [MovieController::class, 'store']);
+Route::delete('/movies/{movie}', [MovieController::class, 'destroy']);
 
-route::get('/genres', [GenreController::class, 'index']);
+Route::get('/genres', [GenreController::class, 'index']);
+Route::get('/genres/create', [GenreController::class, 'create']);
+Route::get('/genres', [GenreController::class, 'index']);
+Route::delete('/genres/{review}', [GenreController::class, 'destroy']);
 
-route::get('/reviews', [ReviewController::class, 'index']);
+Route::get('/reviews', [ReviewController::class, 'index']);
+Route::get('/reviews/create', [ReviewController::class, 'create']);
+Route::get('/reviews', [ReviewController::class, 'index']);
+Route::delete('/reviews/{review}', [ReviewController::class, 'destroy']);
