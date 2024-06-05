@@ -17,27 +17,28 @@ class ReviewController extends Controller
 
     public function create()
     {
-    $genres = Genre::all();
-    return view('movies.create', compact('genres'));
+    $reviews= Review::all();
+    return view('reviews.create', compact('reviews'));
     }
 
     public function store(Request $request)
     {
         $validatedData = $request->validate([
             'title' => 'required',
-            'genre_id' => 'required',
             'poster' => 'required',
-            'synopsis' => 'required',
+            'user' => 'required',
+            'rating' => 'required',
+            'date' => 'required',
         ]);
 
-        Movie::create($validatedData);
+        Review::create($validatedData);
 
-        return redirect('/movies')->with('success', 'Movie added successfully!');
+        return redirect('/reviews')->with('success', 'Review added successfully!');
     }
 
-    public function destroy(Movie $movie)
+    public function destroy(Review $review)
     {
-        $movie->delete();
-        return redirect('/movies')->with('success', 'Movie deleted successfully!');
+        $review->delete();
+        return redirect('/reviews')->with('success', 'Review deleted successfully!');
     }
 }
